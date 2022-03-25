@@ -67,8 +67,8 @@ void pegarToken(){
     HTTPClient https;
     WiFiClientSecure client;
     client.setInsecure(); //the magic line, use with caution
-    client.connect("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAZllk4j8CaqDi4OaSVAUUDSPAaacK2F_I", 443);
-    https.begin(client, "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAZllk4j8CaqDi4OaSVAUUDSPAaacK2F_I");
+    client.connect("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[id_projeto_firebase]", 443);
+    https.begin(client, "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[id_projeto_firebase]");
     https.addHeader("Content-Type", "application/json");
 
     String parametros = "{\"email\": \"lucas.desenv.web@gmail.com\",\"password\": \"123456\",\"returnSecureToken\": true}";
